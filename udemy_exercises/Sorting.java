@@ -14,10 +14,11 @@ class Sorting {
 
     public static int[] getNums(int numbers, int[] userIntegers) {
         System.out.println("Enter " + numbers + " integers:\r");
+        Scanner sc = new Scanner(System.in);
         for (int i = 0; i < userIntegers.length; i++) {
-            Scanner sc = new Scanner(System.in);
             userIntegers[i] = sc.nextInt();
         }
+        sc.close();
         return userIntegers;
     }
 

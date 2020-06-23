@@ -1,6 +1,6 @@
 package udemy_exercises.cell_phone;
 
-class Contact extends CellPhone {
+class Contact {
     private String name;
     private String phoneNumber;
 
@@ -17,7 +17,7 @@ class Contact extends CellPhone {
         return phoneNumber;
     }
 
-    public private static Contact createContact(String name, String phoneNumber) {
+    public static Contact createContact(String name, String phoneNumber) {
         return new Contact(name, phoneNumber);
     }
 

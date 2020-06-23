@@ -4,11 +4,11 @@ import java.util.*;
 
 public class Branch {
     private String name;
-    private ArrayList<Customer> customer;
+    private ArrayList<Customer> customers;
 
     public Branch(String name) {
         this.name = name;
-        this.customer = new ArrayList<Customer>();
+        this.customers = new ArrayList<Customer>();
     }
 
     public String getName() {
@@ -17,10 +17,14 @@ public class Branch {
 
     public boolean newCustomer(String customerName, double initialAmount) {
         if (findCustomer(customerName) == null) {
-            this.customer.add(new Customer(customerName, initialAmount));
+            this.customers.add(new Customer(customerName, initialAmount));
             return true;
         }
         return false;
+    }
+
+    public ArrayList<Customer> getCustomers() {
+        return customers;
     }
 
     public boolean addCustomerTransaction(String customerName, double amount) {
@@ -33,9 +37,9 @@ public class Branch {
     }
 
     private Customer findCustomer(String customerName) {
-        for (int i = 0; i < this.customer.size(); i++) {
-            Customer checkedCustomer = this.customer.get(i);
-            if (this.customer.get(i).getName().equals(customerName)) {
+        for (int i = 0; i < this.customers.size(); i++) {
+            Customer checkedCustomer = this.customers.get(i);
+            if (this.customers.get(i).getName().equals(customerName)) {
                 return checkedCustomer;
             }
         }

@@ -25,7 +25,7 @@ For your convenience, the exercises from UDEMY are summarized below:
        - Duration
      - **Album class** 
        - Playlist of **Songs**.
-       - addPlayist() (songs must appear in the list in the order by which they were added)
+       - addPlaylist() (songs must appear in the list in the order by which they were added)
        - stop()
        - nextSong()
        - previousSong()
